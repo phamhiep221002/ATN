@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ATN</title>
+</head>
+
+<body>
+    <h1>Add product</h1>
+
+    <form action="/quotes" method="POST">
+        <input type="text" placeholder="id" name="id" />
+        <input type="text" placeholder="toy name" name="toyname" />
+        <input type="text" placeholder="price" name="price" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2> View </h2>
+    <ul class="quotes">
+        <!-- Loop through quotes -->
+        <% for(var i=0; i < quotes.length; i++) {%>
+            <li class="quote">
+                <!-- Output name from the iterated quote object -->
+                <span>
+                    <%= quotes[i].id %>
+                </span>:
+                <!-- Output quote from the iterated quote object -->
+                <span>
+                    <%= quotes[i].toyname %>
+                </span>:
+                <span>
+                    <%= quotes[i].price %>
+                </span>
+            </li>
+            <% } %>
+    </ul>
+
+
+</body>
+
+</html>
